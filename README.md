@@ -1,7 +1,9 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Ahmed%20Oukali&fontColor=ffffff&fontSize=56&fontAlignY=38&desc=Embedded%20Systems%20%26%20Environmental%20Sensing%20Engineer&descSize=18&descAlignY=60&animation=fadeIn" width="100%" alt="Ahmed Oukali"/>
+<h1 align="center">Ahmed Oukali</h1>
+
+<p align="center"><b>Embedded Systems &amp; Environmental Sensing Engineer</b></p>
 
 <p align="center">
-  <img src="assets/logo.png" width="170" alt="Ahmed Oukali logo"/>
+  <img src="logo.png" width="170" alt="Ahmed Oukali logo"/>
 </p>
 
 <p align="center">
@@ -87,8 +89,8 @@ flowchart LR
 
 <table>
   <tr>
-    <td align="center"><img src="assets/pcb-top.png" alt="PCB top view"/><br/><sub>Board layout, 3D view</sub></td>
-    <td align="center"><img src="assets/pcb-chip.png" alt="PCB with microcontroller"/><br/><sub>Microcontroller board, 3D view</sub></td>
+    <td align="center"><img src="pcb-top.png" alt="PCB top view"/><br/><sub>Board layout, 3D view</sub></td>
+    <td align="center"><img src="pcb-chip.png" alt="PCB with microcontroller"/><br/><sub>Microcontroller board, 3D view</sub></td>
   </tr>
 </table>
 
@@ -228,5 +230,3 @@ I'm open to collaboration on embedded systems, environmental sensing, Edge AI, s
 </p>
 
 <p align="center"><i>"Innovating the future, one circuit at a time"</i></p>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,100:0f2027&height=100&section=footer" width="100%" alt=""/>
