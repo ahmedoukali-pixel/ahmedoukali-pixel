@@ -114,6 +114,10 @@ flowchart LR
 
 > Roadmap items (STM32 nodes, nRF links, Raspberry Pi hub with dashboard, AI and camera) are planned, not deployed.
 
+<div align="center">
+  <img src="probe.svg" width="640" alt="Multi-depth soil probe schematic"/>
+</div>
+
 <table>
   <tr>
     <td align="center"><img src="pcb-top.png" alt="PCB top view"/><br/><sub>Board layout, 3D view</sub></td>
