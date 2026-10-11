@@ -30,7 +30,7 @@
 
 I'm **Ahmed**, an **Embedded Systems & Electronics Engineer** with an **M.Sc. in Embedded Systems Engineering** from **Ibn Khaldoun University of Tiaret, Algeria**.
 
-I build systems where **the physical world meets software**: custom sensors, low-level firmware, signal processing, and AI that turns raw measurements into decisions.
+I build systems where **the physical world meets software**: custom sensors, low-level firmware, signal processing, and AI that turns raw measurements into decisions, plus the databases and dashboards that make that data usable.
 
 <div align="center">
 
@@ -39,7 +39,7 @@ I build systems where **the physical world meets software**: custom sensors, low
 | 🎓 **Education** | M.Sc. Embedded Systems Engineering, Université Ibn Khaldoun de Tiaret (2024–2025), ranked 1st in Electronics |
 | 💼 **Now** | Industrial automation (PLC / HMI / SCADA) at **Tassyir Digital** |
 | 🧠 **Previously** | AI Intern at **SIINE Academy** |
-| 🔭 **Focus** | Environmental sensing · Edge AI · Precision agriculture |
+| 🔭 **Focus** | Environmental sensing · Edge AI · Precision agriculture · Digital twins |
 | 🌍 **Languages** | Arabic (native) · English · French |
 
 <img src="pipeline.svg" width="100%" alt="Electronics → Sensors → Firmware → Signal Processing → AI/ML → Automation"/>
@@ -52,12 +52,28 @@ I build systems where **the physical world meets software**: custom sensors, low
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" height="3"/>
 
+<!-- ===================== WHAT I DO ===================== -->
+## 🧭 What I Do
+
+<div align="center">
+
+| 🔌 Sense | ⚙️ Process | 🧠 Decide |
+|:--|:--|:--|
+| Custom sensor probes | Low-level firmware (C / C++) | KNN and MLP models |
+| Analog signal conditioning | Filtering and signal processing | Edge AI and on-device inference |
+| Multi-layer PCB design | SQL / SQLite logging | Irrigation and lighting control |
+| Proteus 8.17 · Ngspice simulation | MQTT and wireless links | Dashboards and PLC / SCADA automation |
+
+</div>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" height="3"/>
+
 <!-- ===================== FEATURED ===================== -->
 ## 🌱 Featured Project
 
 ### Real-Time Monitoring and Autonomous Smart Irrigation Based on Soil Moisture Profiling
 
-Irrigation shouldn't depend on a single surface value. This project builds a **vertical soil profile** so decisions reflect the **root zone**.
+An **IoT + Edge AI agricultural system** that builds a **vertical soil profile**, so irrigation decisions reflect the **root zone** instead of a single surface value.
 
 ```mermaid
 flowchart LR
@@ -75,12 +91,28 @@ flowchart LR
 | 📉 **Signal conditioning** | TLV272-based analog stage, temperature-assisted interpretation |
 | 🧠 **Intelligence** | KNN and MLP, tested on black, red and brown soils over ~2 months |
 | 🕸️ **Local network** | Nodes cross-check neighbors to flag abnormal or failed sensors, no cloud dependency |
-| 🗺️ **Roadmap** | PIC → STM32 nodes with nRF links → Raspberry Pi hub with dashboard, AI and camera |
-| 🌍 **Impact** | Designed for water optimization in agriculture |
+| 🗄️ **Data logging** | SQL / SQLite storage of readings and decisions |
+| 📊 **Visualization** | Dashboard with the soil profile (roadmap: Raspberry Pi hub) |
+| 🌍 **Impact** | Designed for water optimization in semi-arid agriculture |
+
+<details>
+<summary><b>🏗️ System architecture, layer by layer</b></summary>
+<br/>
+
+| Layer | Role | Technologies |
+|:--|:--|:--|
+| **1. Sensing** | Capacitive moisture and temperature at multiple depths | Custom helical electrodes |
+| **2. Conditioning** | Amplification, filtering, temperature compensation | TLV272 · Proteus 8.17 · Ngspice |
+| **3. Node firmware** | Acquisition, calibration, packet handling | C · PIC (current) → STM32 (roadmap) |
+| **4. Validation** | Neighbor cross-check to detect failed or abnormal sensors | Local network logic |
+| **5. Intelligence** | Soil-state classification and irrigation decision | KNN · MLP · Python |
+| **6. Hub & interface** | Storage, dashboard, optional camera | SQLite · Raspberry Pi · nRF24L01 · WebSocket / FastAPI |
+
+</details>
 
 <img src="https://img.shields.io/badge/TRL--4-Laboratory%20proof--of--concept-orange?style=flat-square"/>
 
-> Roadmap items are planned, not deployed.
+> Roadmap items (STM32 nodes, nRF links, Raspberry Pi hub with dashboard, AI and camera) are planned, not deployed.
 
 <table>
   <tr>
@@ -114,17 +146,59 @@ flowchart LR
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" height="3"/>
 
+<!-- ===================== RESEARCH ===================== -->
+## 💳 AI Research Project
+
+### Enhancing Fraud Detection Through Synthetic Tabular Data Augmentation
+
+Improving **financial fraud detection** with synthetic data generation and machine learning on the **IEEE-CIS Fraud Detection** dataset.
+
+```mermaid
+flowchart LR
+    A[IEEE-CIS Dataset] --> B[Preprocessing]
+    B --> C[Class Imbalance]
+    C --> D[SMOTE / ADASYN]
+    C --> E[CTGAN]
+    D --> F[ML Models]
+    E --> F
+    F --> G[Fraud Detection]
+    G --> H[PR-AUC · ROC-AUC · F1]
+```
+
+- ⚖️ Severe class imbalance analysis
+- 🔄 Oversampling with **SMOTE** and **ADASYN**
+- 🧬 Synthetic tabular generation with **CTGAN**
+- 📊 Evaluation with **PR-AUC, ROC-AUC, Precision, Recall, F1**
+- 🔬 Comparative study of augmentation strategies
+
+> Academic / team work. My contribution: _fill in your part here_.
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" height="3"/>
+
 <!-- ===================== PROJECTS ===================== -->
 ## 🛠️ Projects
+
+### 🔧 Embedded & Hardware
 
 | Project | What it does | Stack | Links |
 |:--|:--|:--|:--|
 | 🌱 **Soil Moisture Profiling** | Multi-depth soil sensing and autonomous irrigation | Custom probe · TLV272 · PIC · KNN · MLP · SQLite | [GitHub](https://github.com/ahmedoukali-pixel) |
 | 💡 **Smart Lighting Control** | AI-based remote lighting control with energy optimization | ESP32 · TensorFlow · WiFi/BLE · MQTT · React Native | [Code](https://github.com/ahmedoukali-pixel/lighting-control) |
 | 🤖 **Autonomous Robot with AI Vision** | Object detection and navigation | ESP32 · TensorFlow Lite · OpenCV | [Code](https://github.com/ahmedoukali-pixel/autonomous-robot) |
-| 🔌 **Multi-Layer PCB Design** | Signal-integrity and thermal optimization | Altium Designer | See hardware images above |
+| 🔌 **Multi-Layer PCB Design** | Signal-integrity and thermal optimization | Altium Designer · Proteus 8.17 | See hardware images above |
+
+### 🌐 Software, Data & Team Projects
+
+| Project | What it does | Stack | Links |
+|:--|:--|:--|:--|
+| 🌾 **AgriTwin** | Real-time agricultural monitoring and intelligent irrigation (team project) | Raspberry Pi · NRF24L01 · FastAPI · WebSocket · AI | [Repository](https://github.com/hostinghosting144-star) |
+| 🗺️ **Digital Twin for Agricultural Monitoring** | Digital twin of a monitored agricultural site | IoT data · simulation | Academic work |
+| 📦 **E-commerce Warehouse Simulation** | Warehouse management simulation | AnyLogic | Academic work |
+| 💳 **Fraud Detection** | Fraud classification with synthetic tabular data augmentation | Python · XGBoost · Random Forest · SMOTE · CTGAN | [Repository](https://github.com/hostinghosting144-star) |
+| 🎓 **Wonder School** | Online education and school management platform | Vue 3 · Vite · Tailwind · FastAPI · PostgreSQL | [Repository](https://github.com/hostinghosting144-star) |
+| 🧠 **Recommendation System** | Personalized recommendations via collaborative filtering | Java · JavaFX · Cosine Similarity | [Repository](https://github.com/hostinghosting144-star) |
 | 🎮 **MAZE GARDEN** | Interactive web platform for games and puzzles | HTML5 · CSS3 · JavaScript | [Live](https://hostinghosting144-star.github.io/MAZE_GARDEN./) · [Source](https://github.com/hostinghosting144-star/MAZE_GARDEN) |
-| 🌐 **Portfolio** | Animated, responsive portfolio site | HTML5 · CSS3 · JavaScript | [Source](https://github.com/ahmedoukali-pixel) |
+| 🌐 **Portfolio** | Animated, responsive portfolio site (dark theme, scroll animations) | HTML5 · CSS3 · JavaScript | [Live](https://hostinghosting144-star.github.io/Portfolio/) |
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" height="3"/>
 
@@ -139,8 +213,12 @@ flowchart LR
 
 <br/><br/>
 
-**🔌 Hardware & Signal**<br/>
-<sub>Altium Designer · KiCad · Proteus · Ngspice · Analog signal conditioning · Multi-layer PCB · DSP</sub>
+**🔌 Hardware, Simulation & Signal**<br/>
+<img src="https://img.shields.io/badge/Proteus-8.17-1B6AC9?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Altium%20Designer-A5915F?style=for-the-badge&logo=altiumdesigner&logoColor=white"/>
+<img src="https://img.shields.io/badge/KiCad-314CB0?style=for-the-badge&logo=kicad&logoColor=white"/>
+<img src="https://img.shields.io/badge/Ngspice-555555?style=for-the-badge"/><br/>
+<sub>Analog signal conditioning · Multi-layer PCB · DSP · Circuit simulation</sub>
 
 <br/><br/>
 
@@ -150,15 +228,22 @@ flowchart LR
 
 <br/><br/>
 
-**🎨 Web & Mobile**<br/>
-<img src="https://skillicons.dev/icons?i=html,css,js,react&perline=4" /><br/>
-<sub>Responsive design · React Native</sub>
+**🗄️ Data & Databases**<br/>
+<img src="https://skillicons.dev/icons?i=sqlite,fastapi&perline=2" /><br/>
+<sub>SQL (queries, schema design, joins) · SQLite · MQTT · WebSocket · Local dashboards</sub>
 
 <br/><br/>
 
-**🗄️ Data & Communication**<br/>
-<img src="https://skillicons.dev/icons?i=sqlite&perline=1" /><br/>
-<sub>SQL · SQLite · MQTT · Local dashboards</sub>
+**🎨 Web & Mobile**<br/>
+<img src="https://skillicons.dev/icons?i=html,css,js,react&perline=4" /><br/>
+<sub>Responsive design · CSS animations · Intersection Observer · React Native</sub>
+
+<br/><br/>
+
+**📝 Research & Documentation**<br/>
+<img src="https://skillicons.dev/icons?i=latex&perline=1" /><br/>
+<img src="https://img.shields.io/badge/Overleaf-47A141?style=for-the-badge&logo=overleaf&logoColor=white"/><br/>
+<sub>Scientific writing, reports and papers in LaTeX</sub>
 
 <br/><br/>
 
@@ -177,10 +262,23 @@ flowchart LR
 
 | Role | Organization | Period |
 |:--|:--|:--|
-| 🏭 **Industrial Automation (PLC / HMI / SCADA)** | Tassyir Digital | Current |
-| 🤖 **Artificial Intelligence Intern** | SIINE Academy | Previous |
+| 🏭 **Industrial Automation (PLC / HMI / SCADA)** | Tassyir Digital | Apr 2026 – Present |
+| 🤖 **Artificial Intelligence Intern** | SIINE Academy | Jan 2026 – Apr 2026 |
 
 </div>
+
+<details>
+<summary><b>📚 Research & Academic Work</b></summary>
+<br/>
+
+- Real-Time Monitoring and Autonomous Smart Irrigation Based on Soil Moisture Profiling
+- Fraud Detection Through Synthetic Tabular Data Augmentation
+- Digital Twin for Agricultural Monitoring
+- E-commerce Warehouse Management Simulation (AnyLogic)
+- Machine Learning & Data Science projects
+- Web & mobile application development
+
+</details>
 
 <details>
 <summary><b>🏅 Competitions</b></summary>
@@ -206,6 +304,18 @@ flowchart LR
 - Advanced PCB Design
 
 </details>
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" height="3"/>
+
+<!-- ===================== ROADMAP ===================== -->
+## 🚀 What I'm Working On
+
+| Status | Item |
+|:--|:--|
+| 🔬 **Active** | Soil moisture profiling: validation across soils and sensor-failure detection |
+| 🧪 **Next** | Migrating nodes from PIC to STM32 with nRF links |
+| 🖥️ **Next** | Raspberry Pi hub: dashboard, AI inference and camera |
+| 🎯 **2026** | Chipathon 2026, Track B: analog circuits for sensors (Sky130) |
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" height="3"/>
 
@@ -241,15 +351,17 @@ flowchart LR
 <img src="https://img.shields.io/badge/Edge%20AI-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
 <img src="https://img.shields.io/badge/Environmental%20Sensing-2C9FB7?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Precision%20Agriculture-2ea44f?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Digital%20Twins-203a43?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Industrial%20Automation-203a43?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/PCB%20Design-A5915F?style=for-the-badge&logo=altiumdesigner&logoColor=white"/>
+<img src="https://img.shields.io/badge/SQL%20%26%20Data-4479A1?style=for-the-badge&logo=sqlite&logoColor=white"/>
 
 </div>
 
 <!-- ===================== CONTACT ===================== -->
 ## 🤝 Let's Build Something
 
-Open to collaboration on **embedded systems, environmental sensing, Edge AI, smart agriculture** and technical web platforms.
+Open to collaboration on **embedded systems, environmental sensing, Edge AI, smart agriculture, digital twins** and technical web platforms.
 
 <div align="center">
 
